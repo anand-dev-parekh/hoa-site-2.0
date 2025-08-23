@@ -1,0 +1,17 @@
+title: Maple Grove HOA
+description: A friendly, well-kept community in the heart of town.
+# If you publish to a user/organization site (username.github.io), leave baseurl empty.
+# If you publish to a project site, set baseurl: "/your-repo-name"
+baseurl: ""
+url: "https://anand-dev-parekh.github.io"
+
+# Where residents can pay dues online; set to your payment portal URL
+pay_url: "https://example-payments.com/your-hoa"
+address: "123 Maple Grove Lane, YourCity, ST 00000"
+
+# Permalinks for posts (news)
+permalink: /news/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM

@@ -1,0 +1,14 @@
+officers:
+  - name: Alex Johnson
+    role: President
+    email: alex@example.com
+    phone: "(555) 123-4567"
+  - name: Priya Patel
+    role: Vice President
+    email: priya@example.com
+  - name: Chris Lee
+    role: Treasurer
+    email: treasurer@example.com
+  - name: Morgan Smith
+    role: Secretary
+    email: secretary@example.com
