@@ -28,15 +28,15 @@
   <header class="site-header">
     <div class="container header-row">
       <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      <nav class="nav">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
-        <a href="{{ '/officers/' | relative_url }}">Officers</a>
-        <a href="{{ '/news/' | relative_url }}">News</a>
-        <a href="{{ '/contact/' | relative_url }}">Contact</a>
-        {% if site.pay_url %}<a class="pay-btn" href="{{ site.pay_url }}" target="_blank" rel="noopener">Pay Dues</a>{% endif %}
-        <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-      </nav>
+        <nav class="nav">
+          <a href="{{ site.baseurl }}/">Home</a>
+          <a href="{{ site.baseurl }}/about/">About</a>
+          <a href="{{ site.baseurl }}/officers/">Officers</a>
+          <a href="{{ site.baseurl }}/news/">News</a>
+          <a href="{{ site.baseurl }}/contact/">Contact</a>
+          {% if site.pay_url %}<a class="pay-btn" href="{{ site.pay_url }}" target="_blank" rel="noopener">Pay Dues</a>{% endif %}
+        </nav>
+
     </div>
   </header>
 
