@@ -15,3 +15,21 @@ permalink: /officers/
   </li>
 {% endfor %}
 </ul>
+
+<!-- Officers grid -->
+<section class="officers-grid">
+  <h2>Board & Officers</h2>
+  <div class="officers-grid__wrap">
+    {%- for o in site.data.officers -%}
+      {%- assign slug = o.image | default: o.name | downcase | replace: ' ', '-' | replace: '.', '' | replace: ',', '' -%}
+      <article class="officer-card">
+        <img src="{{ '/assets/images/officers/' | relative_url }}{{ slug }}.jpg" alt="{{ o.name }} headshot">
+        <div class="officer-card__body">
+          <h3>{{ o.name }}</h3>
+          {%- if o.role -%}<p class="muted">{{ o.role }}</p>{%- endif -%}
+          {%- if o.email -%}<p><a href="mailto:{{ o.email }}">{{ o.email }}</a></p>{%- endif -%}
+        </div>
+      </article>
+    {%- endfor -%}
+  </div>
+</section>

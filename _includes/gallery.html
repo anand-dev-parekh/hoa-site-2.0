@@ -1,0 +1,24 @@
+
+{%- comment -%}
+Renders a gallery by scanning /assets/images/gallery/ for static files.
+Usage: {% include gallery.html %}
+Optional: pass a 'caption' for the section like {% include gallery.html caption="Neighborhood life" %}
+{%- endcomment -%}
+
+<section id="community-gallery" class="gallery-section">
+  <h2>Community Gallery</h2>
+  {%- if include.caption -%}
+    <p>{{ include.caption }}</p>
+  {%- else -%}
+    <p>Here’s a peek at everyday life around the neighborhood.</p>
+  {%- endif -%}
+  {%- assign all = site.static_files | where_exp: "f", "f.path contains '/assets/images/gallery/'" -%}
+  {%- assign imgs = all | sort: "path" -%}
+  <div class="gallery-grid">
+    {%- for f in imgs -%}
+      <figure>
+        <img src="{{ f.path | relative_url }}" alt="{{ f.basename | replace: '-', ' ' }}">
+      </figure>
+    {%- endfor -%}
+  </div>
+</section>
